@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './HelloWorld';
+import Menu from './comum/Menu';
 import ColecaoProdutos from './comum/ColecaoProdutos'
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <div>
       {/* <HelloWorld nome="Rafael"/>
       <HelloWorld nome="Teste"/> */}
+      <Menu/>
       <ColecaoProdutos/>
     
       {/* <div className="App">
