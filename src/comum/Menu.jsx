@@ -3,23 +3,31 @@ import './../App.css';
 import Logo from './Logo'
 
 class Menu extends Component {
-    render() {        
-        return <div className="menu" id="myTopnav">
-            <Logo/>
-            <nav>
-                <ul className="ulMenu">
-                    <li className="liMenu"><a className="aMenu" href="">Seleções</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Grêmio</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Inter</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Brasileiros</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Argentinos</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Espanhóis</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Ingleses</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Italianos</a></li>
-                    <li className="liMenu"><a className="aMenu" href="">Outros</a></li>
-                </ul>
+    clickMenu = () => {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    
+    render() {
+        return <div id="menuFull">
+            <nav className="topnav" id="myTopnav">
+                <Logo/>
+                <a href="">Seleções</a>
+                <a href="">Grêmio</a>
+                <a href="">Inter</a>
+                <a href="">Brasileiros</a>
+                <a href="">Argentinos</a>
+                <a href="">Espanhóis</a>
+                <a href="">Ingleses</a>
+                <a href="">Italianos</a>
+                <a href="">Outros</a>
+                <a href="javascript:void(0);"  className="icon" onClick={this.clickMenu}>&#9776;</a>
             </nav>
-        </div>;
+        </div>        
     }
 }
 
